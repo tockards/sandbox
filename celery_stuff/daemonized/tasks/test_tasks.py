@@ -12,7 +12,6 @@
 from daemonized.worker.celery_worker import celery
 
 
-
 @celery.task
 def hello():
     print 'hello'
