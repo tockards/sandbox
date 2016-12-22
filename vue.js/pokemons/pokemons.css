@@ -1,0 +1,23 @@
+/*
+ * pokemons.css
+ * Copyright (C) 2016 tockards
+ *
+ * Distributed under terms of the MIT license.
+ */
+
+
+#demo {
+  font-family: 'Helvetica', Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #f66;
+}
+li {
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+.author, .date {
+  font-weight: bold;
+}
+

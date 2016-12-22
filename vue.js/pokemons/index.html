@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<! basic example using pokemon api similar to github example>
+<html>
+    
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<head>
+        <meta charset="utf-8" />
+		<title>Index</title>
+  <link rel="stylesheet" href="pokemons.css">
+
+	</head>
+	<body>
+		<div id="demo">
+		<h1>Pokeapi test</h1>
+          <template v-for="branch in branches">
+            <input type="radio"
+                   :id="branch"
+                   :value="branch"
+                   name="branch"
+                   v-model="currentBranch">
+            <label :for="branch">{{ branch }}</label>
+            </template>
+            <h2>{{currentBranch}}</h2>
+            <img v-bind:src=pokemon.sprites.back_default  v-if="pokemon"/>
+		<ul>
+			<li v-for="(result, index) in pokemons.results">
+            <span v-bind:title="currentBranch" class="author"><a :href="result.url"
+                  target="_blank">{{result.name}}</a></span>
+            <button v-on:click="doThis(result.url)">{{result.name}}</button>
+
+			</li>
+		</ul>
+		</div>	
+
+	</body>
+
+    <script src="pokemons.js"></script>
+</html>
