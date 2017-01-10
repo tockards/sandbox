@@ -13,13 +13,12 @@
 from __future__ import absolute_import 
 
 from celery import Celery
-from daemonized import celeryconfig
 
 celery = Celery(include=[
                          'daemonized.tasks.test_tasks'
     ])
 
-celery.config_from_object(celeryconfig)
+celery.config_from_object('daemonized.celeryconfig')
 
 if __name__ == '__main__':
     celery.start()

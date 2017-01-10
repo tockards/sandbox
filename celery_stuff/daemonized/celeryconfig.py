@@ -13,3 +13,4 @@ from os import environ
 
 BROKER_URL = environ['BROKER_URL']
 CELERY_RESULT_BACKEND = environ['BACKEND']
+INCLUDE = ['daemonized.tasks']
